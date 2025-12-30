@@ -1,13 +1,14 @@
 import React from "react";
-import Banner from "../Banner/Banner";
 
-function WonBanner({ numOfGuess }) {
+import Banner from "../Banner";
+
+function WonBanner({ numOfGuesses, handleRestart }) {
 	return (
-		<Banner status="happy">
+		<Banner status="happy" action={handleRestart} actionText="Restart game">
 			<p>
 				<strong>Congratulations!</strong> Got it in{" "}
 				<strong>
-					{numOfGuess === 1 ? "1 guess" : `${numOfGuess} guesses`}
+					{numOfGuesses === 1 ? "1 guess" : `${numOfGuesses} guesses`}
 				</strong>
 				.
 			</p>
