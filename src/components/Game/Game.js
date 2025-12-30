@@ -28,7 +28,6 @@ function Game() {
 	}
 	return (
 		<>
-			{gameStatus}
 			<GuessResult gameStatus={gameStatus} guesses={guesses} answer={answer} />
 			<GuessInput handleAddGuess={handleAddGuess} gameStatus={gameStatus} />
 
